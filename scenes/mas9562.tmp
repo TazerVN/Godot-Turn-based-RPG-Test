@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjvjuvokjsmo1"]
+
+[ext_resource type="Script" path="res://scripts/master.gd" id="1_6mvys"]
+[ext_resource type="Script" path="res://scripts/base.gd" id="1_t3os6"]
+[ext_resource type="PackedScene" uid="uid://o4g8elerjpk" path="res://scenes/player.tscn" id="2_4is8o"]
+[ext_resource type="PackedScene" uid="uid://bketbg2goquiq" path="res://scenes/Enemy.tscn" id="3_143ex"]
+[ext_resource type="Resource" uid="uid://bcjxlikm15paw" path="res://resources/characters/ninja_frog_stats.tres" id="4_jb070"]
+[ext_resource type="Script" path="res://scripts/move_set.gd" id="4_nk7e8"]
+[ext_resource type="Resource" uid="uid://bitig8j41jtnl" path="res://resources/move_set/Tackle.tres" id="5_lgu80"]
+[ext_resource type="Resource" uid="uid://b76ywqb727mvq" path="res://resources/move_set/SpinningKick.tres" id="6_ew1ig"]
+
+[node name="Master" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_6mvys")
+
+[node name="CharacterList" type="Node2D" parent="."]
+script = ExtResource("1_t3os6")
+
+[node name="Player" parent="CharacterList" instance=ExtResource("2_4is8o")]
+position = Vector2(112.333, 101.667)
+move_set_list = Array[ExtResource("4_nk7e8")]([ExtResource("5_lgu80"), ExtResource("6_ew1ig")])
+
+[node name="Enemy" parent="CharacterList" instance=ExtResource("3_143ex")]
+position = Vector2(246.333, 132.667)
+
+[node name="Enemy2" parent="CharacterList" instance=ExtResource("3_143ex")]
+position = Vector2(233.333, 50.6667)
+stats = ExtResource("4_jb070")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(193.667, 103)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 330.0
+offset_top = 1.0
+offset_right = 439.0
+offset_bottom = 424.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+
+[connection signal="move_selection" from="." to="CharacterList/Player" method="_on_master_move_selection"]

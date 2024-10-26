@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move_set" load_steps=2 format=3 uid="uid://bitig8j41jtnl"]
+
+[ext_resource type="Script" path="res://scripts/move_set.gd" id="1_mwggw"]
+
+[resource]
+script = ExtResource("1_mwggw")
+move_name = "tackle"
+Move_Base_Damage = 50
+Move_Accuracy = 100
+Affinity = "Normal"
+Physical = true
+Multi_target = false

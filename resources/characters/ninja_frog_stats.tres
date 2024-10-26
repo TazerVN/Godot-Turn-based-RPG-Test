@@ -1,0 +1,98 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=15 format=3 uid="uid://bcjxlikm15paw"]
+
+[ext_resource type="Script" path="res://scripts/stats.gd" id="1_shtpi"]
+[ext_resource type="Texture2D" uid="uid://dp21bd0rtmwkb" path="res://assets/Free/Main Characters/Ninja Frog/Idle (32x32).png" id="2_veql0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7kfr"]
+atlas = ExtResource("2_veql0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0fyr"]
+atlas = ExtResource("2_veql0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb5k8"]
+atlas = ExtResource("2_veql0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdr7q"]
+atlas = ExtResource("2_veql0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83r11"]
+atlas = ExtResource("2_veql0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raxpi"]
+atlas = ExtResource("2_veql0")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghlew"]
+atlas = ExtResource("2_veql0")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n231j"]
+atlas = ExtResource("2_veql0")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5towi"]
+atlas = ExtResource("2_veql0")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngtv5"]
+atlas = ExtResource("2_veql0")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f0j2"]
+atlas = ExtResource("2_veql0")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggepw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7kfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0fyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb5k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdr7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83r11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raxpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghlew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n231j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5towi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngtv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f0j2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_shtpi")
+character_type = "Ninja Frog"
+max_health = 50
+Defense = 20
+base_damage = 10
+sprite = SubResource("SpriteFrames_ggepw")
+character_class = "Ninja"

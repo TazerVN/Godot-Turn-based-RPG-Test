@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://bketbg2goquiq"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ncige"]
+[ext_resource type="Resource" uid="uid://du6rx8cy36ihg" path="res://resources/characters/Skeleton_stats.tres" id="2_710d8"]
+[ext_resource type="Script" path="res://scripts/move_set.gd" id="3_myvlf"]
+[ext_resource type="Resource" uid="uid://bitig8j41jtnl" path="res://resources/move_set/Tackle.tres" id="4_anppk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6uly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_av6sf"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ncige")
+stats = ExtResource("2_710d8")
+move_set_list = Array[ExtResource("3_myvlf")]([ExtResource("4_anppk")])
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x6uly")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 7)
+shape = SubResource("CircleShape2D_av6sf")

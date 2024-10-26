@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move_set" load_steps=2 format=3 uid="uid://b76ywqb727mvq"]
+
+[ext_resource type="Script" path="res://scripts/move_set.gd" id="1_7usuu"]
+
+[resource]
+script = ExtResource("1_7usuu")
+move_name = "spinningkick"
+Move_Base_Damage = 100
+Move_Accuracy = 100
+Affinity = "Normal"
+Physical = true
+Multi_target = false
+move_id = 1

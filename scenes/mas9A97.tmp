@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjvjuvokjsmo1"]
+
+[ext_resource type="Script" path="res://scripts/base.gd" id="1_t3os6"]
+[ext_resource type="PackedScene" uid="uid://o4g8elerjpk" path="res://scenes/player.tscn" id="2_4is8o"]
+[ext_resource type="PackedScene" uid="uid://bketbg2goquiq" path="res://scenes/Enemy.tscn" id="3_143ex"]
+[ext_resource type="Resource" uid="uid://bcjxlikm15paw" path="res://resources/characters/ninja_frog_stats.tres" id="4_jb070"]
+
+[node name="Master" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="CharacterList" type="Node2D" parent="."]
+script = ExtResource("1_t3os6")
+
+[node name="Player" parent="CharacterList" instance=ExtResource("2_4is8o")]
+position = Vector2(112.333, 101.667)
+
+[node name="Enemy" parent="CharacterList" instance=ExtResource("3_143ex")]
+position = Vector2(246.333, 132.667)
+
+[node name="Enemy2" parent="CharacterList" instance=ExtResource("3_143ex")]
+position = Vector2(233.333, 50.6667)
+stats = ExtResource("4_jb070")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(659, 261)
+zoom = Vector2(3, 3)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 330.333
+offset_top = 1.33333
+offset_right = 383.333
+offset_bottom = 123.333
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/ScrollContainer"]
+layout_mode = 2
+text = "hello
+"

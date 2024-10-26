@@ -1,0 +1,105 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=16 format=3 uid="uid://dkjn2ta2hp6y0"]
+
+[ext_resource type="Script" path="res://scripts/stats.gd" id="1_bwh7h"]
+[ext_resource type="Texture2D" uid="uid://dlelrq5qtiq7n" path="res://assets/Amin Asset/Crocoo-Idle_12_ frames.png" id="2_bhu6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51p57"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jrme"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3ems"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwi17"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vagaq"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4bm6"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr32n"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3j48"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f66fp"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x66ty"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibywr"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee0sj"]
+atlas = ExtResource("2_bhu6a")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d17or"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51p57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jrme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3ems")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwi17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vagaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4bm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr32n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3j48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f66fp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x66ty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibywr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee0sj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_bwh7h")
+character_type = "Player"
+max_health = 100
+Defense = 50
+base_damage = 10
+sprite = SubResource("SpriteFrames_d17or")
+character_class = "Player"
